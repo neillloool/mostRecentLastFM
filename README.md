@@ -1,2 +1,4 @@
-# mostRecentLastFM
-Learning the Last.fm API.  Displays most recent song scrobbled and allows you to search other users and also click on the album art to view that song on Last.fm
+# recently-played
+Gets the most recently played track on my spotify account using LastFM's Rest API
+
+
