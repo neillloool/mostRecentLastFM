@@ -4,12 +4,11 @@ $(document).ready(function() {
     // setting global variables
     var recentTrackUrl = "https://ws.audioscrobbler.com/2.0?method=user.getRecentTracks&user=neillloool&limit=1&api_key=9f69c0460a627dddc4696e84707458a0&format=json";
     var defaultCoverImage = "https://cdn.last.fm/flatness/responsive/2/noimage/default_album_300_g4.png";
-    var refreshTime = 500; //look for updated JSON every "xxx" miliseconds
+    var refreshTime = 5000; //look for updated JSON every "xxx" miliseconds
     
     $(function () {
         $('#displayResultsButton').click(function () {
             recentTrackUrl = "https://ws.audioscrobbler.com/2.0?method=user.getRecentTracks&user=" + $('#query').val() +"&limit=1&api_key=9f69c0460a627dddc4696e84707458a0&format=json";
-            console.log(url);
             return (recentTrackUrl);
         });
     });
@@ -24,7 +23,7 @@ $(document).ready(function() {
                 var album = info.album["#text"]; 
                 var cover = info.image[3]["#text"]; 
                 var url = info.url;
-                //var nowplaying = info["@attr"];
+                var nowplaying = info["@attr"];
             
             
             if ( cover.length > 0 ) {
